@@ -21,4 +21,5 @@ export class AppComponent {
       false
     )
   ];
+  private currentTask = new Task(null, false);
 }

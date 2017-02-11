@@ -4,9 +4,11 @@
       <form class="form-inline">
         <div class="form-group">
           <label for="content-field" class="sr-only"></label>
-          <input id="content-field" type="text" class="form-control" placeholder="Enter a task...">
+          <input id="content-field" type="text" class="form-control" placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
+          <!-- name is required for ngModel for angular2 template drive form -->
         </div>
         <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+        Content: {{ currentTask.content }}
       </form>
     </div>
   </div>
