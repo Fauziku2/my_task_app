@@ -1,13 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
-      <form class="form-inline" (ngSubmit)="addTask()">
+      <!-- #taskForm is a template reference variable -->
+      <form class="form-inline" (ngSubmit)="addTask()" #taskForm="ngForm">
         <div class="form-group">
           <label for="content-field" class="sr-only"></label>
-          <input id="content-field" type="text" class="form-control" placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content">
+          <input id="content-field" type="text" class="form-control" placeholder="Enter a task..." [(ngModel)]="currentTask.content" name="content" required>
           <!-- name is required for ngModel for angular2 template drive form -->
         </div>
-        <button type="submit" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
+        <button type="submit" class="btn btn-primary" [disabled]="taskForm.form.invalid"><i class="fa fa-plus" aria-hidden="true"></i>Add Task</button>
         Content: {{ currentTask.content }}
       </form>
     </div>
