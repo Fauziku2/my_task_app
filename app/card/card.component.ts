@@ -11,4 +11,13 @@ import { Task } from "../model/task";
 
 export class CardComponent {
   @Input() task: Task; // input property to allow data to be passed into the properties
+
+  statusToggle() {
+    // this.task.completed = !this.task.completed
+    if (this.task.completed === true) {
+      this.task.completed = false;
+    } else {
+      this.task.completed = true;
+    }
+  }
 }

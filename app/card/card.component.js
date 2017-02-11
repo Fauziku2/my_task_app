@@ -13,20 +13,28 @@ var task_1 = require("../model/task");
 var CardComponent = (function () {
     function CardComponent() {
     }
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', task_1.Task)
-    ], CardComponent.prototype, "task", void 0);
-    CardComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: "app-card",
-            templateUrl: "card.component.html",
-            styleUrls: ["card.component.css"] // array because we might have more than one style css file
-        }), 
-        __metadata('design:paramtypes', [])
-    ], CardComponent);
+    CardComponent.prototype.statusToggle = function () {
+        // this.task.completed = !this.task.completed
+        if (this.task.completed === true) {
+            this.task.completed = false;
+        }
+        else {
+            this.task.completed = true;
+        }
+    };
     return CardComponent;
 }());
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", task_1.Task)
+], CardComponent.prototype, "task", void 0);
+CardComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: "app-card",
+        templateUrl: "card.component.html",
+        styleUrls: ["card.component.css"] // array because we might have more than one style css file
+    })
+], CardComponent);
 exports.CardComponent = CardComponent;
 //# sourceMappingURL=card.component.js.map
