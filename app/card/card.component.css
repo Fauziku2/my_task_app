@@ -1,5 +1,6 @@
 .card {
   border-radius: 0;
+  cursor: pointer;
 }
 
 .card,
@@ -18,7 +19,12 @@
   text-align: right;
 }
 
-i {
+.fa-times {
   color: #CC0000;
+  padding-right: .5rem;
+}
+
+.fa-check {
+  color: #CCC;
   padding-right: .5rem;
 }
