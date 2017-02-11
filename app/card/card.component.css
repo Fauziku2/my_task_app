@@ -8,6 +8,12 @@
   border: none;
 }
 
+.card.completed,
+.card.completed .card-footer {
+  background-color: #EEE;
+  color: #CCC;
+}
+
 .card-footer {
   text-align: right;
 }
