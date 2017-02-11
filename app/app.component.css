@@ -1,0 +1,23 @@
+.container {
+  /*margin-top: : 3rem;*/
+}
+.row {
+  /*margin-bottom: 1.5rem;*/
+  margin-top: 3rem;
+}
+form {
+  text-align: center;
+}
+
+.btn {
+  background-color: #009688;
+  border-color: #009688;
+  margin-left: 0.5rem;
+}
+
+.form-control:focus {
+  border-color: #009688;
+}
+i {
+  padding-right: 0.5rem;
+}
